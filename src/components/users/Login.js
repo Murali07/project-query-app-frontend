@@ -11,7 +11,7 @@ function Login() {
 
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
-    let [toggle, setToggle] = useState("");
+    let [toggle, setToggle] = useState(false);
     let [message, setMessage] = useState("");
     let navigate = useNavigate();
 
@@ -46,23 +46,23 @@ function Login() {
   return (
     <div className="loginpage">
       <div className="login-wrapper">
-        <h1>Welcome to our App</h1>
+        <h1>Welcome to Zen Class</h1>
         <p>Login to Continue</p>
       </div>
       <div className="login-main-wrapper">
         <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-3">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control type="email" value={email} placeholder="Enter email" onChange={(e)=>setEmail(e.target.value)}  />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-3">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control type="password" value={password} placeholder="Password" onChange={(e)=>setPassword(e.target.value)} />
           </Form.Group>
 
           <Button variant="primary" onClick={() => handleLogin()}>
-            Submit
+            Login
           </Button>
         </Form>
         {toggle ? <Spinner animation="border" variant="primary" /> : <></>}
