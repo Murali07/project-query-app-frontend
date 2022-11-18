@@ -1,0 +1,11 @@
+.create{    
+    margin: 25px;    
+}
+
+.text-center{    
+    /* display: flex; */
+    padding: 20px;
+    width: 500px;
+    height: 10vh;
+    
+}

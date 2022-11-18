@@ -5,7 +5,7 @@ import "../styles/Create.css";
 
 function Create() {
   return (
-    <div>
+    <div className="create">
       <Card className="text-center">
         <Card.Header>
           <Card.Title>Instant Solution</Card.Title>
